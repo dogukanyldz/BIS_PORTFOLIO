@@ -1,0 +1,6 @@
+export default [
+    'KREDİ OPERASYONLARI DİPLOMASI',
+    'SAKARYA ÜNİVERSİTESİ DİPLOMASI',
+    'YILIN EN İYİ ÇALIŞANI SERTİFAKASI',
+  ];
+  

@@ -1,25 +1,24 @@
 import logo from './logo.svg';
-import './App.css';
+import Button from '@mui/material/Button';
+import { useNavigate } from "react-router-dom";
 
-function App() {
+
+export default function App() {
+  var navigator = useNavigate();
+
+
+  const redirect= async() =>{
+    navigator('/create');
+  }
+  
   return (
-    <div className="App">
+    <div className="App" style={{backgrondcolour:'red'}}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h4 style={{color:'black'}}>
+          Portföy Bulunmamaktadır!
+        </h4>
+        <Button onClick={redirect} variant="contained">Portföyü Oluştur</Button>
       </header>
     </div>
   );
 }
-
-export default App;
