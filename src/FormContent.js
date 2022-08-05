@@ -60,16 +60,18 @@ export function FormContent({ props, todos, createTask, deleteTask, deleteAlt2 }
 										<BsArrowsMove color="blue" className='handle' style={{ marginTop: "10px", width: "25%", cursor: 'move' }} size={51} onClick={() => deleteAlt2(index, row_index)} />
 
 									</Grid>
-									<Grid item xs={1}>
+									<Grid sx={{mt:2}}>
 										<Select style={{ height: "65%", width: "120%", marginTop: "5px" }} value={age} onChange={handleChange2}>
 
-											<MenuItem value={10}>1</MenuItem>
-											<MenuItem value={20}>2</MenuItem>
-											<MenuItem value={30}>3</MenuItem>
+											<MenuItem value={10}>Aynı Gün</MenuItem>
+											<MenuItem value={20}>Aynı Gün</MenuItem>
+											<MenuItem value={30}>Aynı Gün</MenuItem>
 										</Select>
 									</Grid>
 
-									<Grid item xs={1}>
+									<Grid item xs={1} sx={{mt:-2}}>
+									<label>
+											Saat
 										<input className='text-center'
 											style={{
 												borderStyle: 'solid', color: 'red', borderColor: 'black', display: 'flex',
@@ -78,8 +80,14 @@ export function FormContent({ props, todos, createTask, deleteTask, deleteAlt2 }
 											}}
 											defaultValue={todo.day}
 										/>
+										</label>
 									</Grid>
-									<Grid item xs={1}>
+									<Grid item xs={1} sx={{mt:-2}}>
+										<div>
+											
+										</div>
+										<label>
+											Gün
 										<input className='handle'
 											style={{
 												borderStyle: 'solid', color: 'red', borderColor: 'black', display: 'flex',
@@ -89,6 +97,8 @@ export function FormContent({ props, todos, createTask, deleteTask, deleteAlt2 }
 											}}
 											defaultValue={todo.hour}
 										/>
+																				</label>
+
 									</Grid>
 									<Grid item xs={5}>
 
